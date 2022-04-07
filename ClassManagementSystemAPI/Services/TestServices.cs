@@ -16,7 +16,7 @@ namespace ClassManagementSystemAPI.Services
 
             var mongoDatabase = mongoClient.GetDatabase(databaseSettings.Value.DatabaseName);
 
-            _testCollection = mongoDatabase.GetCollection<Test>("Temp");
+            _testCollection = mongoDatabase.GetCollection<Test>("Test");
         }
 
         public async Task<List<Test>> GetAsync() =>
